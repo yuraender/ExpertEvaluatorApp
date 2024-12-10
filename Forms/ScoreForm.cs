@@ -17,9 +17,12 @@ namespace ExpertEvaluator.Forms {
             InitializeComponent();
             _expert = expert;
             _subject = subject;
-            API = new ExpertAPI("http://me.yuraender.ru:8083");
+            API = new ExpertAPI("https://ee.yuraender.ru");
 
             Text += _subject == Subject.DNS_SHOP ? "DNS – интернет-магазин" : "Ситилинк – интернет-магазин";
+            if (subject == Subject.DNS_SHOP) {
+                button1.Text = "Продолжить";
+            }
 
             // Настройка взаимодействия с DataGridView
             dataGridView1.AllowUserToAddRows = false;

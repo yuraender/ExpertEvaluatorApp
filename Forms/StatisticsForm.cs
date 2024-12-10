@@ -10,7 +10,7 @@ namespace ExpertEvaluator.Forms {
 
         public StatisticsForm() {
             InitializeComponent();
-            ExpertAPI api = new ExpertAPI("http://me.yuraender.ru:8083");
+            ExpertAPI api = new ExpertAPI("https://ee.yuraender.ru");
 
             Statistics statistics = api.GetStatistics();
             label2.Text += statistics.Experts;

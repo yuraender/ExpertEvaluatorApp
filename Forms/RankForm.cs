@@ -18,7 +18,7 @@ namespace ExpertEvaluator.Forms {
         public RankForm(Expert expert) {
             InitializeComponent();
             _expert = expert;
-            API = new ExpertAPI("http://me.yuraender.ru:8083");
+            API = new ExpertAPI("https://ee.yuraender.ru");
 
             // Настройка взаимодействия с DataGridView
             dataGridView1.AllowUserToAddRows = false;

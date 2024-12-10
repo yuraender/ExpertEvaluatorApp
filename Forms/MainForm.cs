@@ -16,7 +16,7 @@ namespace ExpertEvaluator.Forms {
                 MessageBox.Show("Введите ваше имя.");
                 return;
             }
-            ExpertAPI api = new ExpertAPI("http://me.yuraender.ru:8083");
+            ExpertAPI api = new ExpertAPI("https://ee.yuraender.ru");
             int id = api.Login(textBox1.Text);
             if (id != -1) {
                 RankForm rankForm = new RankForm(new Expert { ID = id });
