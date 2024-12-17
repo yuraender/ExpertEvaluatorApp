@@ -3,6 +3,7 @@
     public enum Subject {
 
         DNS_SHOP,
-        CITILINK
+        CITILINK,
+        MVIDEO
     }
 }

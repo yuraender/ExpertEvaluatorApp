@@ -19,8 +19,10 @@ namespace ExpertEvaluator.Forms {
             _subject = subject;
             API = new ExpertAPI("https://ee.yuraender.ru");
 
-            Text += _subject == Subject.DNS_SHOP ? "DNS – интернет-магазин" : "Ситилинк – интернет-магазин";
-            if (subject == Subject.DNS_SHOP) {
+            Text += _subject == Subject.DNS_SHOP ? "DNS – интернет-магазин"
+                : _subject == Subject.CITILINK ? "DNS – интернет-магазин"
+                : "М.Видео - главный эксперт по технике";
+            if (subject != Subject.MVIDEO) {
                 button1.Text = "Продолжить";
             }
 

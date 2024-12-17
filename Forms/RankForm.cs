@@ -122,7 +122,7 @@ namespace ExpertEvaluator.Forms {
             foreach (Subject subject in Enum.GetValues(typeof(Subject))) {
                 ScoreForm scoreForm = new ScoreForm(_expert, order, subject);
                 scoreForm.FormClosed += (s, ev) => {
-                    if (subject == Subject.CITILINK) {
+                    if (subject == Subject.MVIDEO) {
                         MessageBox.Show("Благодарим Вас за экспертное заключение!");
                         Application.Exit();
                     }

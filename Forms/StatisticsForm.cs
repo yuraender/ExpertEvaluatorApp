@@ -20,6 +20,7 @@ namespace ExpertEvaluator.Forms {
             label4.Text += Math.Round(statistics.Concordance, 5);
             label5.Text += Math.Round(api.Calculate(Subject.DNS_SHOP), 5);
             label6.Text += Math.Round(api.Calculate(Subject.CITILINK), 5);
+            label7.Text += Math.Round(api.Calculate(Subject.MVIDEO), 5);
         }
     }
 }
