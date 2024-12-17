@@ -94,7 +94,7 @@ namespace ExpertEvaluator.Forms {
             List<CriterionScore> evaluation = new List<CriterionScore>();
             foreach (DataGridViewRow row in dataGridView1.Rows) {
                 Criterion criterion = (Criterion) row.Cells[0].Value;
-                int rank = row.Index + 1;
+                int rank = dataGridView1.Rows.Count - row.Index;
                 int score = (int) row.Cells[1].Value;
                 evaluation.Add(new CriterionScore {
                     Criterion = criterion,

@@ -95,7 +95,11 @@ namespace ExpertEvaluator.Utils {
         public double Calculate(Subject subject) {
             RestRequest request = new RestRequest("scores/calculate", Method.GET);
             request.AddParameter("subject", subject.ToString());
-            return double.Parse(Request<string>(request).Replace(".", ","));
+            string score = Request<string>(request).Replace(".", ",");
+            if (!double.TryParse(score, out double parsed)) {
+                return 0.0D;
+            }
+            return parsed;
         }
 
         public Statistics GetStatistics() {
